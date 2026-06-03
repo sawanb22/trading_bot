@@ -11,9 +11,9 @@ A robust, modular Python CLI application for placing **MARKET** and **LIMIT** or
 - 📊 **Market & Limit Orders** — Full support for both order types with `timeInForce: GTC` defaulted on LIMIT
 - 🛡️ **Strict Input Validation** — Fails fast with clear error messages before any API call is made
 - 🎨 **Rich Terminal UI** — Beautiful tables, semantic colors (green/red), and error panels powered by [`rich`](https://github.com/Textualize/rich)
-- 📝 **Comprehensive Logging** — Every request and response is appended to `bot_execution.log` for audit purposes
-- 🔐 **Secure Credential Handling** — API keys loaded from `.env` (never committed to version control)
-- 🏗️ **Modular Architecture** — CLI strictly separated from business logic for testability and reusability
+- 📝 **Comprehensive Logging** — Every request and response is appended to [bot_execution.log](./bot_execution.log) for audit purposes
+- 🔐 **Secure Credential Handling** — API keys loaded from `.env` (configured via [.env.example](./.env.example) and never committed to version control)
+- 🏗️ **Modular Architecture** — CLI ([cli.py](./cli.py)) strictly separated from business logic ([bot/](./bot)) and tests ([tests/](./tests)) for testability and reusability
 
 ---
 
@@ -201,7 +201,7 @@ python -m unittest discover -s tests
 
 ## 📋 Logging
 
-All activity is appended to `bot_execution.log` in the project root:
+All activity is appended to [bot_execution.log](./bot_execution.log) in the project root:
 
 ```
 [2026-06-02 14:30:01] [INFO    ] — Submitting BUY MARKET order | Symbol: BTCUSDT | Qty: 0.01
@@ -232,8 +232,8 @@ Log levels used:
 
 ## 🔒 Security Notes
 
-- `.env` is listed in `.gitignore` — it will **never** be committed
-- Only `.env.example` (with placeholder values) is committed
+- `.env` is listed in [.gitignore](./.gitignore) — it will **never** be committed
+- Only [.env.example](./.env.example) (with placeholder values) is committed
 - Testnet keys are functionally useless on the Mainnet (different URL, different signatures)
 
 ---
@@ -251,7 +251,7 @@ Log levels used:
 ## 📬 Submission Checklist
 
 - [x] Source code in public GitHub repository with clean commit history
-- [x] `README.md` fully documented with setup steps and run instructions
-- [x] `requirements.txt` present with pinned versions
-- [x] `bot_execution.log` included with proof of MARKET + LIMIT orders
-- [x] `.env` excluded from repository (only `.env.example` committed)
+- [x] [README.md](./README.md) fully documented with setup steps and run instructions
+- [x] [requirements.txt](./requirements.txt) present with pinned versions
+- [x] [bot_execution.log](./bot_execution.log) included with proof of MARKET + LIMIT orders
+- [x] `.env` excluded from repository (only [.env.example](./.env.example) committed)
