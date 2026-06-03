@@ -160,3 +160,10 @@ Traceback (most recent call last):
   File "C:\Python314\Lib\unittest\mock.py", line 1234, in _execute_mock_call
     raise effect
 ValueError: Some weird error
+[2026-06-03 10:46:19] [DEBUG   ] — Logger initialised. Log file: D:\web projects\trading_bot\bot_execution.log
+[2026-06-03 10:46:19] [INFO    ] — CLI invoked | symbol=BTCUSDT side=BUY type=MARKET qty=0.01 price=None mock=True
+[2026-06-03 10:46:19] [INFO    ] — Initializing Simulated/Mock Binance client.
+[2026-06-03 10:46:19] [DEBUG   ] — Preparing to submit order | Payload: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.01}
+[2026-06-03 10:46:19] [INFO    ] — Submitting BUY MARKET order | Symbol: BTCUSDT | Qty: 0.01
+[2026-06-03 10:46:19] [INFO    ] — [MOCK] Processing order simulation | Symbol: BTCUSDT, Side: BUY, Type: MARKET, Qty: 0.01
+[2026-06-03 10:46:19] [INFO    ] — Order accepted by exchange | Raw response: {'orderId': 5796747, 'symbol': 'BTCUSDT', 'status': 'FILLED', 'clientOrderId': 'mock_5796747', 'price': '0.00', 'avgPrice': '67509.86', 'origQty': '0.01', 'executedQty': '0.01', 'cumQty': '0.01', 'cumQuote': '675.1', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'updateTime': 1780463779241}
