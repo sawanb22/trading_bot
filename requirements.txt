@@ -1,0 +1,11 @@
+# Binance Futures Testnet Trading Bot — Dependencies
+# Install with: pip install -r requirements.txt
+
+# Binance exchange client — handles HMAC SHA256 signing, testnet routing
+python-binance==1.0.19
+
+# Secure .env credential loading
+python-dotenv==1.0.1
+
+# Rich terminal UI — tables, panels, colors, spinners
+rich==13.7.1
