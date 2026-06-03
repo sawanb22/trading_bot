@@ -44,10 +44,6 @@ This application implements a complete Binance Futures testnet client that stric
   * [bot/orders.py](./bot/orders.py) — Constructs order payloads and interacts with the client interface.
   * [bot/validators.py](./bot/validators.py) — Contains pure validation functions for inputs.
   * [bot/logging_config.py](./bot/logging_config.py) — Configures logs rotation and levels.
-* **[tests/](./tests)**:
-  * [tests/test_cli.py](./tests/test_cli.py) — Integration tests for CLI arguments, mock pathways, and exit codes.
-  * [tests/test_orders.py](./tests/test_orders.py) — Mock API tests verifying payloads, exceptions, and order routing.
-  * [tests/test_validators.py](./tests/test_validators.py) — Unit tests covering input constraints, edge cases, and bounds.
 
 ---
 
@@ -115,15 +111,6 @@ python cli.py --symbol ETHUSDT --side SELL --type LIMIT --qty 0.05 --price 3650.
 ### 3. Help Command
 ```bash
 python cli.py --help
-```
-
----
-
-## 🧪 Running Automated Tests
-
-Run the full automated unit and integration test suite:
-```bash
-python -m unittest discover -s tests
 ```
 
 ---
