@@ -27,6 +27,7 @@ from binance.client import Client
 from dotenv import load_dotenv
 
 from bot.logging_config import get_logger
+from bot.mock_client import MockClient
 
 # Resolve the .env path relative to this file (works regardless of cwd)
 _DOTENV_PATH = Path(__file__).parent.parent / ".env"
@@ -39,7 +40,7 @@ _DEFAULT_FUTURES_URL = "https://demo-fapi.binance.com"
 logger = get_logger()
 
 
-def get_client() -> Client:
+def get_client() -> Client | MockClient:
     """
     Load credentials from .env and return a Binance Futures client.
     Routes to Binance Demo Trading (demo-fapi.binance.com) by default,
@@ -53,6 +54,10 @@ def get_client() -> Client:
     """
     # Load .env — override=False means real env vars take precedence if set
     load_dotenv(dotenv_path=_DOTENV_PATH, override=False)
+
+    if os.getenv("USE_MOCK", "").strip().lower() in ("true", "1", "yes"):
+        logger.info("Initializing Simulated/Mock Binance client.")
+        return MockClient()
 
     api_key = os.getenv("BINANCE_API_KEY", "").strip()
     api_secret = os.getenv("BINANCE_API_SECRET", "").strip()

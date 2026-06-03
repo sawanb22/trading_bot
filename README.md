@@ -26,13 +26,18 @@ trading_bot/
 ├── .gitignore
 ├── requirements.txt
 ├── cli.py                  ← Entry point (arg parsing + rich UI)
-├── bot_execution.log       ← Generated at runtime (audit trail)
-└── bot/
-    ├── __init__.py
-    ├── client.py           ← Loads .env, creates Binance Testnet client
-    ├── orders.py           ← Builds payload, submits order, handles exceptions
-    ├── validators.py       ← Pure input validation functions
-    └── logging_config.py   ← Singleton file + console logger
+├── bot_execution.log       ← Generated at runtime (audit trail, committed)
+├── bot/
+│   ├── __init__.py
+│   ├── client.py           ← Loads .env, creates Binance Testnet client
+│   ├── mock_client.py      ← Mock client for local offline simulation
+│   ├── orders.py           ← Builds payload, submits order, handles exceptions
+│   ├── validators.py       ← Pure input validation functions
+│   └── logging_config.py   ← Singleton file + console logger
+└── tests/
+    ├── test_cli.py         ← CLI integration tests
+    ├── test_orders.py      ← Orders API mock tests
+    └── test_validators.py  ← Pure validation unit tests
 ```
 
 ---
@@ -112,10 +117,26 @@ python cli.py --symbol BTCUSDT --side BUY --type MARKET --qty 0.01
 python cli.py --symbol ETHUSDT --side SELL --type LIMIT --qty 0.1 --price 3500.00
 ```
 
+### Mock/Simulated Mode (No API keys required)
+To run executions and generate logs without configured API credentials:
+```bash
+# Market order simulation
+python cli.py --symbol BTCUSDT --side BUY --type MARKET --qty 0.01 --mock
+
+# Limit order simulation
+python cli.py --symbol ETHUSDT --side SELL --type LIMIT --qty 0.1 --price 3500.00 --mock
+```
+
 ### Help
 
 ```bash
 python cli.py --help
+```
+
+### Running Tests
+To run the automated unit and integration tests:
+```bash
+python -m unittest discover -s tests
 ```
 
 ### All Arguments
@@ -127,6 +148,7 @@ python cli.py --help
 | `--type` | ✅ | `MARKET` or `LIMIT` |
 | `--qty` | ✅ | Quantity — must be > 0 (e.g. `0.01`) |
 | `--price` | LIMIT only | Limit price — required for LIMIT, rejected for MARKET |
+| `--mock` | ❌ | Run in simulated mode (no API connection or credentials needed) |
 
 ---
 

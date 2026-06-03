@@ -106,6 +106,11 @@ def build_parser() -> argparse.ArgumentParser:
             "Example: --price 3500.00"
         ),
     )
+    parser.add_argument(
+        "--mock",
+        action="store_true",
+        help="Run the bot in mock/simulated mode (does not hit the real API).",
+    )
 
     return parser
 
@@ -231,13 +236,18 @@ def main() -> None:
     parser = build_parser()
     args = parser.parse_args()
 
+    if args.mock:
+        import os
+        os.environ["USE_MOCK"] = "True"
+
     logger.info(
-        "CLI invoked | symbol=%s side=%s type=%s qty=%s price=%s",
+        "CLI invoked | symbol=%s side=%s type=%s qty=%s price=%s mock=%s",
         args.symbol,
         args.side,
         args.order_type,
         args.qty,
         args.price,
+        args.mock,
     )
 
     # ── Step 1: Validate All Inputs ──────────────────────────────────────────

@@ -8,6 +8,7 @@ env/
 
 # === Logs — can be regenerated; submitted separately ===
 *.log
+!bot_execution.log
 
 # === Python cache ===
 __pycache__/

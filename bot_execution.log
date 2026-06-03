@@ -1,0 +1,100 @@
+[2026-06-02 19:16:56] [DEBUG   ] — Logger initialised. Log file: D:\web projects\trading_bot\bot_execution.log
+[2026-06-02 19:16:56] [INFO    ] — CLI invoked | symbol=ETHUSDT side=SELL type=LIMIT qty=0.1 price=None
+[2026-06-02 19:16:56] [ERROR   ] — Input validation failed: A valid price is required for LIMIT orders. Use --price <value> (e.g. --price 3500.00).
+[2026-06-02 19:20:09] [DEBUG   ] — Logger initialised. Log file: D:\web projects\trading_bot\bot_execution.log
+[2026-06-02 19:20:09] [INFO    ] — CLI invoked | symbol=ETHUSDT side=SELL type=LIMIT qty=0.1 price=None
+[2026-06-02 19:20:09] [ERROR   ] — Input validation failed: A valid price is required for LIMIT orders. Use --price <value> (e.g. --price 3500.00).
+[2026-06-02 19:20:19] [DEBUG   ] — Logger initialised. Log file: D:\web projects\trading_bot\bot_execution.log
+[2026-06-02 19:20:19] [INFO    ] — CLI invoked | symbol=BTCUSDT side=BUY type=MARKET qty=0.01 price=67000.0
+[2026-06-02 19:20:19] [ERROR   ] — Input validation failed: MARKET orders execute at the current best available price — do not provide --price. Remove the --price argument and retry.
+[2026-06-02 19:20:32] [DEBUG   ] — Logger initialised. Log file: D:\web projects\trading_bot\bot_execution.log
+[2026-06-02 19:20:32] [INFO    ] — CLI invoked | symbol=BTCUSDT side=HODL type=MARKET qty=0.01 price=None
+[2026-06-02 19:20:32] [ERROR   ] — Input validation failed: Invalid side 'HODL'. Accepted values: BUY, SELL.
+[2026-06-02 19:25:48] [DEBUG   ] — Logger initialised. Log file: D:\web projects\trading_bot\bot_execution.log
+[2026-06-02 19:25:48] [INFO    ] — CLI invoked | symbol=BTCUSDT side=BUY type=MARKET qty=0.01 price=None
+[2026-06-02 19:25:48] [INFO    ] — Loading Binance Testnet client (testnet=True).
+[2026-06-02 19:25:50] [INFO    ] — Binance Testnet client initialised successfully.
+[2026-06-02 19:25:50] [DEBUG   ] — Preparing to submit order | Payload: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.01}
+[2026-06-02 19:25:50] [INFO    ] — Submitting BUY MARKET order | Symbol: BTCUSDT | Qty: 0.01
+[2026-06-02 19:25:52] [ERROR   ] — BinanceAPIException | HTTP Status: 401 | Error Code: -2015 | Message: Invalid API-key, IP, or permissions for action
+[2026-06-02 19:31:51] [DEBUG   ] — Logger initialised. Log file: D:\web projects\trading_bot\bot_execution.log
+[2026-06-02 19:31:51] [INFO    ] — CLI invoked | symbol=BTCUSDT side=BUY type=MARKET qty=0.01 price=None
+[2026-06-02 19:31:51] [INFO    ] — Loading Binance Testnet client (testnet=True).
+[2026-06-02 19:31:52] [INFO    ] — Binance Testnet client initialised successfully.
+[2026-06-02 19:31:52] [DEBUG   ] — Preparing to submit order | Payload: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.01}
+[2026-06-02 19:31:52] [INFO    ] — Submitting BUY MARKET order | Symbol: BTCUSDT | Qty: 0.01
+[2026-06-02 19:31:53] [ERROR   ] — BinanceAPIException | HTTP Status: 401 | Error Code: -2015 | Message: Invalid API-key, IP, or permissions for action
+[2026-06-03 10:35:59] [DEBUG   ] — Logger initialised. Log file: D:\web projects\trading_bot\bot_execution.log
+[2026-06-03 10:35:59] [INFO    ] — CLI invoked | symbol=BTCUSDT side=BUY type=MARKET qty=0.01 price=None mock=True
+[2026-06-03 10:35:59] [INFO    ] — Initializing Simulated/Mock Binance client.
+[2026-06-03 10:35:59] [DEBUG   ] — Preparing to submit order | Payload: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.01}
+[2026-06-03 10:35:59] [INFO    ] — Submitting BUY MARKET order | Symbol: BTCUSDT | Qty: 0.01
+[2026-06-03 10:35:59] [INFO    ] — [MOCK] Processing order simulation | Symbol: BTCUSDT, Side: BUY, Type: MARKET, Qty: 0.01
+[2026-06-03 10:35:59] [INFO    ] — Order accepted by exchange | Raw response: {'orderId': 7439002, 'symbol': 'BTCUSDT', 'status': 'FILLED', 'clientOrderId': 'mock_7439002', 'price': '0.00', 'avgPrice': '67504.26', 'origQty': '0.01', 'executedQty': '0.01', 'cumQty': '0.01', 'cumQuote': '675.04', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'updateTime': 1780463159377}
+[2026-06-03 10:36:08] [DEBUG   ] — Logger initialised. Log file: D:\web projects\trading_bot\bot_execution.log
+[2026-06-03 10:36:08] [INFO    ] — CLI invoked | symbol=ETHUSDT side=SELL type=LIMIT qty=0.1 price=3500.0 mock=True
+[2026-06-03 10:36:08] [INFO    ] — Initializing Simulated/Mock Binance client.
+[2026-06-03 10:36:08] [DEBUG   ] — Preparing to submit order | Payload: {'symbol': 'ETHUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': 0.1, 'price': 3500.0, 'timeInForce': 'GTC'}
+[2026-06-03 10:36:08] [INFO    ] — Submitting SELL LIMIT order | Symbol: ETHUSDT | Qty: 0.1 | Price: 3500.0
+[2026-06-03 10:36:08] [INFO    ] — [MOCK] Processing order simulation | Symbol: ETHUSDT, Side: SELL, Type: LIMIT, Qty: 0.1
+[2026-06-03 10:36:08] [INFO    ] — Order accepted by exchange | Raw response: {'orderId': 5124028, 'symbol': 'ETHUSDT', 'status': 'NEW', 'clientOrderId': 'mock_5124028', 'price': '3500.00', 'avgPrice': '0.00', 'origQty': '0.1', 'executedQty': '0.0', 'cumQty': '0.0', 'cumQuote': '0.00', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'updateTime': 1780463168483}
+[2026-06-03 10:36:38] [DEBUG   ] — Logger initialised. Log file: D:\web projects\trading_bot\bot_execution.log
+[2026-06-03 10:36:55] [DEBUG   ] — Logger initialised. Log file: D:\web projects\trading_bot\bot_execution.log
+[2026-06-03 10:36:55] [DEBUG   ] — Preparing to submit order | Payload: {'symbol': 'ETHUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': 0.1, 'price': 3500.0, 'timeInForce': 'GTC'}
+[2026-06-03 10:36:55] [INFO    ] — Submitting SELL LIMIT order | Symbol: ETHUSDT | Qty: 0.1 | Price: 3500.0
+[2026-06-03 10:36:55] [INFO    ] — Order accepted by exchange | Raw response: {'orderId': 12346, 'symbol': 'ETHUSDT', 'status': 'NEW', 'executedQty': '0.0', 'avgPrice': '0.0'}
+[2026-06-03 10:36:55] [DEBUG   ] — Preparing to submit order | Payload: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.01}
+[2026-06-03 10:36:55] [INFO    ] — Submitting BUY MARKET order | Symbol: BTCUSDT | Qty: 0.01
+[2026-06-03 10:36:55] [INFO    ] — Order accepted by exchange | Raw response: {'orderId': 12345, 'symbol': 'BTCUSDT', 'status': 'FILLED', 'executedQty': '0.01', 'avgPrice': '67000.0'}
+[2026-06-03 10:36:55] [DEBUG   ] — Preparing to submit order | Payload: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.01}
+[2026-06-03 10:36:55] [INFO    ] — Submitting BUY MARKET order | Symbol: BTCUSDT | Qty: 0.01
+[2026-06-03 10:36:55] [ERROR   ] — BinanceAPIException | HTTP Status: 400 | Error Code: -2010 | Message: Account has insufficient balance for requested action.
+[2026-06-03 10:36:55] [DEBUG   ] — Preparing to submit order | Payload: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.01}
+[2026-06-03 10:36:55] [INFO    ] — Submitting BUY MARKET order | Symbol: BTCUSDT | Qty: 0.01
+[2026-06-03 10:36:55] [ERROR   ] — BinanceRequestException (network error) | BinanceRequestException: Connection timed out
+[2026-06-03 10:36:55] [DEBUG   ] — Preparing to submit order | Payload: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.01}
+[2026-06-03 10:36:55] [INFO    ] — Submitting BUY MARKET order | Symbol: BTCUSDT | Qty: 0.01
+[2026-06-03 10:36:55] [ERROR   ] — Unexpected error during order placement | ValueError: Some weird error
+Traceback (most recent call last):
+  File "D:\web projects\trading_bot\bot\orders.py", line 96, in place_order
+    response = client.futures_create_order(**payload)
+  File "C:\Python314\Lib\unittest\mock.py", line 1175, in __call__
+    return self._mock_call(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\unittest\mock.py", line 1179, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\unittest\mock.py", line 1234, in _execute_mock_call
+    raise effect
+ValueError: Some weird error
+[2026-06-03 10:37:12] [DEBUG   ] — Logger initialised. Log file: D:\web projects\trading_bot\bot_execution.log
+[2026-06-03 10:37:12] [INFO    ] — CLI invoked | symbol=BTCUSDT side=BUY type=MARKET qty=0.01 price=None mock=True
+[2026-06-03 10:37:12] [INFO    ] — CLI invoked | symbol=BTCUSDT side=BUY type=LIMIT qty=0.01 price=None mock=True
+[2026-06-03 10:37:12] [ERROR   ] — Input validation failed: A valid price is required for LIMIT orders. Use --price <value> (e.g. --price 3500.00).
+[2026-06-03 10:37:12] [DEBUG   ] — Preparing to submit order | Payload: {'symbol': 'ETHUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': 0.1, 'price': 3500.0, 'timeInForce': 'GTC'}
+[2026-06-03 10:37:12] [INFO    ] — Submitting SELL LIMIT order | Symbol: ETHUSDT | Qty: 0.1 | Price: 3500.0
+[2026-06-03 10:37:12] [INFO    ] — Order accepted by exchange | Raw response: {'orderId': 12346, 'symbol': 'ETHUSDT', 'status': 'NEW', 'executedQty': '0.0', 'avgPrice': '0.0'}
+[2026-06-03 10:37:12] [DEBUG   ] — Preparing to submit order | Payload: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.01}
+[2026-06-03 10:37:12] [INFO    ] — Submitting BUY MARKET order | Symbol: BTCUSDT | Qty: 0.01
+[2026-06-03 10:37:12] [INFO    ] — Order accepted by exchange | Raw response: {'orderId': 12345, 'symbol': 'BTCUSDT', 'status': 'FILLED', 'executedQty': '0.01', 'avgPrice': '67000.0'}
+[2026-06-03 10:37:12] [DEBUG   ] — Preparing to submit order | Payload: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.01}
+[2026-06-03 10:37:12] [INFO    ] — Submitting BUY MARKET order | Symbol: BTCUSDT | Qty: 0.01
+[2026-06-03 10:37:12] [ERROR   ] — BinanceAPIException | HTTP Status: 400 | Error Code: -2010 | Message: Account has insufficient balance for requested action.
+[2026-06-03 10:37:12] [DEBUG   ] — Preparing to submit order | Payload: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.01}
+[2026-06-03 10:37:12] [INFO    ] — Submitting BUY MARKET order | Symbol: BTCUSDT | Qty: 0.01
+[2026-06-03 10:37:12] [ERROR   ] — BinanceRequestException (network error) | BinanceRequestException: Connection timed out
+[2026-06-03 10:37:12] [DEBUG   ] — Preparing to submit order | Payload: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.01}
+[2026-06-03 10:37:12] [INFO    ] — Submitting BUY MARKET order | Symbol: BTCUSDT | Qty: 0.01
+[2026-06-03 10:37:12] [ERROR   ] — Unexpected error during order placement | ValueError: Some weird error
+Traceback (most recent call last):
+  File "D:\web projects\trading_bot\bot\orders.py", line 96, in place_order
+    response = client.futures_create_order(**payload)
+  File "C:\Python314\Lib\unittest\mock.py", line 1175, in __call__
+    return self._mock_call(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\unittest\mock.py", line 1179, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\unittest\mock.py", line 1234, in _execute_mock_call
+    raise effect
+ValueError: Some weird error

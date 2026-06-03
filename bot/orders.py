@@ -22,6 +22,7 @@ from binance.client import Client
 from binance.exceptions import BinanceAPIException, BinanceRequestException
 
 from bot.logging_config import get_logger
+from bot.mock_client import MockClient
 
 logger = get_logger()
 
@@ -30,7 +31,7 @@ _DEFAULT_TIME_IN_FORCE = "GTC"
 
 
 def place_order(
-    client: Client,
+    client: Client | MockClient,
     symbol: str,
     side: str,
     order_type: str,
